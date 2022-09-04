@@ -6,17 +6,18 @@ public class PistolAmmo : MonoBehaviour
 {
     public AudioSource pickUpAudio;
     public GameObject fakeAmmo;
-    private void OnTriggerEnter()
+    private void OnTriggerEnter(Collider other)
     {
-        if (GlobalAmmo.currentMag >= 5)
-        {
-            return;
+        if (other.CompareTag("Player")) { 
+            if (GlobalAmmo.currentMag >= 5)
+            {
+                return;
+            }
+            else {
+                fakeAmmo.SetActive(false);
+                pickUpAudio.Play();
+                GlobalAmmo.currentMag++;
+            }
         }
-        else {
-           fakeAmmo.SetActive(false);
-           pickUpAudio.Play();
-           GlobalAmmo.currentMag++;
-        }
-        
     }
 }

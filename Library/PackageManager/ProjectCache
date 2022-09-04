@@ -5,21 +5,72 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637968176845433545
-    m_Hash: 3609400581
+      ticks: 637978616071684150
+    m_Hash: 3962935242
   m_LockFileStatus:
     m_FilePath: C:/Users/Admin/FPS Game/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637968176845531863
-    m_Hash: 2808699783
+      ticks: 637978616103870546
+    m_Hash: 773255964
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
   m_Packages:
     m_ResolvedPackages:
+    - packageId: com.unity.2d.sprite@1.0.0
+      testable: 0
+      isDirectDependency: 1
+      version: 1.0.0
+      source: 2
+      resolvedPath: C:\Users\Admin\FPS Game\Library\PackageCache\com.unity.2d.sprite@1.0.0
+      assetPath: Packages/com.unity.2d.sprite
+      name: com.unity.2d.sprite
+      displayName: 2D Sprite
+      author:
+        name: 
+        email: 
+        url: 
+      category: 2D
+      type: 
+      description: Use Unity Sprite Editor Window to create and edit Sprite asset
+        properties like pivot, borders and Physics shape
+      status: 4
+      errors: []
+      versions:
+        all:
+        - 1.0.0
+        compatible:
+        - 1.0.0
+        verified: 1.0.0
+      dependencies: []
+      resolvedDependencies: []
+      keywords:
+      - 2d
+      - sprite
+      - sprite editor window
+      registry:
+        id: 
+        name: 
+        url: 
+        scopes: []
+        isDefault: 0
+        capabilities: 0
+      hasRegistry: 0
+      hideInEditor: 1
+      entitlements:
+        isAllowed: 1
+      isAssetStorePackage: 0
+      datePublishedTicks: 0
+      documentationUrl: 
+      hasRepository: 0
+      repository:
+        type: 
+        url: 
+        revision: 
+        path: 
     - packageId: com.unity.cinemachine@2.6.15
       testable: 0
       isDirectDependency: 1
@@ -83,6 +134,7 @@ m_PackageAssets:
         - 2.6.11
         - 2.6.14
         - 2.6.15
+        - 2.6.17
         - 2.7.1
         - 2.7.2
         - 2.7.3
@@ -99,8 +151,10 @@ m_PackageAssets:
         - 2.8.3
         - 2.8.4
         - 2.8.6
+        - 2.8.9
         - 2.9.0-pre.1
         - 2.9.0-pre.6
+        - 2.9.1
         compatible:
         - 2.5.0
         - 2.6.0-preview.2
@@ -121,6 +175,7 @@ m_PackageAssets:
         - 2.6.11
         - 2.6.14
         - 2.6.15
+        - 2.6.17
         - 2.7.1
         - 2.7.2
         - 2.7.3
@@ -137,9 +192,11 @@ m_PackageAssets:
         - 2.8.3
         - 2.8.4
         - 2.8.6
+        - 2.8.9
         - 2.9.0-pre.1
         - 2.9.0-pre.6
-        verified: 2.6.15
+        - 2.9.1
+        verified: 2.6.17
       dependencies: []
       resolvedDependencies: []
       keywords:

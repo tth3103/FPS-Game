@@ -13,10 +13,12 @@ public class PistolFire : MonoBehaviour
 
     private bool isFiring = false;
     private bool isReloading = false;
+    
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0)&& !isReloading)
+        
+        if (Input.GetKeyDown(KeyCode.Mouse0) && !isReloading)
         {
             if(GlobalAmmo.currentAmmo < 1)
             {
@@ -45,6 +47,12 @@ public class PistolFire : MonoBehaviour
         pistol.GetComponent<Animator>().Play("Shooting");
         pistolFlash.SetActive(true);
         pistolFireSound.Play();
+
+        if (PlayerCasting.enemyInRange)
+        {
+            PlayerCasting.enemy.GetComponent<EnemyAI>().TakeDamage(10);
+        }
+        
         GlobalAmmo.currentAmmo--;
         yield return new WaitForSeconds(0.5f);
         pistolFlash.SetActive(false);
