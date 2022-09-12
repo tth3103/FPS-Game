@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 321117358571566245}
   - component: {fileID: 321117358571566242}
+  - component: {fileID: 942974180}
   m_Layer: 0
   m_Name: SystemControl
   m_TagString: Untagged
@@ -45,3 +46,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AmmoUI: {fileID: 0}
   MagUI: {fileID: 0}
+--- !u!114 &942974180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 321117358571566243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3fe05680804c04eae217746aaef58f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

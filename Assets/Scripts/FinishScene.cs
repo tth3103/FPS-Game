@@ -39,7 +39,14 @@ public class FinishScene : MonoBehaviour
     }
     public void NextFloor()
     {
-        SceneManager.LoadScene("MainMenu");
+        if (LevelControl.currentLevel >= 3)
+        {
+            SceneManager.LoadScene("MainMenu");
+        }
+        else
+        {
+            SceneManager.LoadScene(LevelControl.currentLevel + 1);
+        }
     }
     public void MainMenu()
     {

@@ -6,6 +6,12 @@ using UnityEngine.SceneManagement;
 public class GameOver : MonoBehaviour
 {
     public GameObject confirmBox;
+
+    public void Start()
+    {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+    }
     private void Update()
     {
         StartCoroutine(Waiting());
@@ -17,7 +23,9 @@ public class GameOver : MonoBehaviour
     }
     public void Continue() 
     {
-        SceneManager.LoadScene("Scene1");
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+        SceneManager.LoadScene(LevelControl.currentLevel);
     }
     public void BackToMainMenu()
     {
