@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Floor2.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
+    path: Assets/Scenes/Floor3.unity
+    guid: 5b3a9468de0170c4f9942a5b4294239a
+  - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: 5b2f841d46d89e047ba11950c35157c5
   - enabled: 1

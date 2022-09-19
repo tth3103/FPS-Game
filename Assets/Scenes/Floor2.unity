@@ -25267,6 +25267,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyInScene: 6
+--- !u!114 &321117359243399236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 321117359243399234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82bae89a529368446b335f50cfce3e31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HpUI: {fileID: 1572667785}
 --- !u!1001 &367236915907064058
 PrefabInstance:
   m_ObjectHideFlags: 0

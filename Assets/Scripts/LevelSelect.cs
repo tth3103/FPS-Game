@@ -32,8 +32,11 @@ public class LevelSelect : MonoBehaviour
     }
     public void Floor_3()
     {
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+        bgm.Stop();
         clickSound.Play();
-        Debug.Log("No scene available");
+        SceneManager.LoadScene("Floor3");
     }
     public void Level_4()
     {
