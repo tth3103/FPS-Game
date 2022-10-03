@@ -1,7 +1,5 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 public class PistolPickup : MonoBehaviour
 {
     public AudioSource pickUpAudio;
@@ -12,8 +10,11 @@ public class PistolPickup : MonoBehaviour
     private void OnTriggerEnter()
     {
         playerPistol.SetActive(true);
+        NotifUI.notif = "Weapon picked up";
+        NotifUI.isTrigger = true;
         fakeWeapon.SetActive(false);
         crossHair.SetActive(true);
         pickUpAudio.Play();
+        
     }
 }

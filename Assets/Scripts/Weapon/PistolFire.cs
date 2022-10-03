@@ -1,7 +1,6 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class PistolFire : MonoBehaviour
 {
     public GameObject pistolFlash;
@@ -23,6 +22,8 @@ public class PistolFire : MonoBehaviour
             if(GlobalAmmo.currentAmmo < 1)
             {
                 pistolEmptySound.Play();
+                NotifUI.isTrigger = true;
+                NotifUI.notif = "Empty ammo";
             }
             else if (!isFiring)
             {
@@ -34,6 +35,8 @@ public class PistolFire : MonoBehaviour
             if (GlobalAmmo.currentMag < 1)
             {
                 pistolEmptySound.Play();
+                NotifUI.isTrigger = true;
+                NotifUI.notif = "Insufficient mag";
             }
             else if (!isReloading)
             {
@@ -64,6 +67,8 @@ public class PistolFire : MonoBehaviour
     {
         isReloading = true;
         pistol.GetComponent<Animator>().Play("Reload");
+        NotifUI.isTrigger = true;
+        NotifUI.notif = "Reloading";
         pistolReloadSound.Play();
         GlobalAmmo.currentMag--;
         GlobalAmmo.currentAmmo = 10;

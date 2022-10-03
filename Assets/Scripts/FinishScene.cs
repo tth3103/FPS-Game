@@ -15,10 +15,17 @@ public class FinishScene : MonoBehaviour
     public GameObject nextFloorButton;
 
     //Score
-    private int finalScore; 
+    private int finalScore;
+
+    private int nextSceneLoad;
     private void Start()
     {
+        nextSceneLoad = LevelControl.currentLevel + 1;
         finalScore = 0;
+        if (nextSceneLoad > PlayerPrefs.GetInt("PlayerAt"))
+        {
+            PlayerPrefs.SetInt("PlayerAt", nextSceneLoad);
+        }
         StartCoroutine(CalcResult());
     }
     IEnumerator CalcResult()
@@ -39,13 +46,14 @@ public class FinishScene : MonoBehaviour
     }
     public void NextFloor()
     {
-        if (LevelControl.currentLevel >= 4)
+        if (nextSceneLoad > 8)
         {
             SceneManager.LoadScene("MainMenu");
         }
         else
         {
-            SceneManager.LoadScene(LevelControl.currentLevel + 1);
+            Cursor.lockState = CursorLockMode.Locked;
+            SceneManager.LoadScene(nextSceneLoad);
         }
     }
     public void MainMenu()

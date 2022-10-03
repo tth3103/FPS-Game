@@ -116,7 +116,10 @@ public class EnemyAI : MonoBehaviour
     }
     private void Shooting()
     {
+        //Get to player last position
         agent.SetDestination(transform.position);
+
+        //Shooting
         if (!alreadyAttacked)
         {
             shooting = true;
@@ -147,9 +150,9 @@ public class EnemyAI : MonoBehaviour
     }
     private void FacePlayer()
     {
-        Vector3 direction =(player.position - transform.position).normalized;
-        Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x,0,direction.z));
-        transform.rotation = Quaternion.Slerp(transform.rotation,lookRotation, Time.deltaTime * 200f);
+        Vector3 direction =(player.transform.position - transform.position);
+        Quaternion lookRotation = Quaternion.LookRotation(direction);
+        transform.rotation = Quaternion.RotateTowards(transform.rotation,lookRotation, Time.deltaTime * 200f);
     }
     private void OnDrawGizmosSelected()
     {
