@@ -53,7 +53,14 @@ public class PistolFire : MonoBehaviour
 
         if (PlayerCasting.enemyInRange)
         {
-            PlayerCasting.enemy.GetComponent<EnemyAI>().TakeDamage(10);
+            if (LevelControl.currentLevel != 9)
+            {
+                PlayerCasting.enemy.GetComponent<EnemyAI>().TakeDamage(10);
+            }
+            else
+            {
+                PlayerCasting.enemy.GetComponent<BossAI>().TakeDamage(10);
+            }
         }
         
         GlobalAmmo.currentAmmo--;

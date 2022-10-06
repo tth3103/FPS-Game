@@ -37,7 +37,14 @@ public class FinishScene : MonoBehaviour
         enemyScore.GetComponent<Text>().text = "Enemy defeated: " + EnemyCount.enemyDefeated;
         enemyScore.SetActive(true);
         yield return new WaitForSeconds(1f);
-        finalScore = GlobalHealth.currentHealth * 50 + EnemyCount.enemyDefeated * 30;
+        if (LevelControl.currentLevel != 9)
+        {
+            finalScore = GlobalHealth.currentHealth * 10 + EnemyCount.enemyDefeated * 10;
+        }
+        else
+        {
+            finalScore = GlobalHealth.currentHealth * 50 + EnemyCount.enemyDefeated * 30;
+        }
         totalScore.GetComponent<Text>().text = "Total Score: "+finalScore;
         totalScore.SetActive(true);
         yield return new WaitForSeconds(2f);
@@ -46,7 +53,7 @@ public class FinishScene : MonoBehaviour
     }
     public void NextFloor()
     {
-        if (nextSceneLoad > 8)
+        if (nextSceneLoad > 9)
         {
             SceneManager.LoadScene("MainMenu");
         }

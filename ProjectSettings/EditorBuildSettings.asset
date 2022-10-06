@@ -32,5 +32,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Floor5.unity
     guid: be9a56eb2598d7b4cb59210d653a5ce2
+  - enabled: 1
+    path: Assets/Scenes/Floor6.unity
+    guid: b059dae6005ee6c4db5236c926cd3a54
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 9e7be553448fa2546aea5752021cbcf7, type: 2}
